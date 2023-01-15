@@ -67,7 +67,7 @@ header {
     display: none;
 }
 section {
-    padding: 80px 18%;
+    padding: 80px 16%;
 }
 /* Home Section */
 .home {
@@ -126,13 +126,14 @@ header.sticky {
 }
 .row-item {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
     align-items: center;
     text-align: center;
     margin-top: 5rem;
 }
 .container-box {
+    height: 100%;
     background: var(--bg-color);
     border: 1px solid #f0eded;
     padding: 50px 10px;
@@ -141,7 +142,6 @@ header.sticky {
     cursor: pointer;
 }
 .container-img img {
-    height: 85px;
     width: 85px;
     padding: 15px;
     background: var(--bg-color);
@@ -414,7 +414,7 @@ header.sticky {
     .navbar {
         position: absolute;
         top: 0;
-        right: 0;
+        right: -100%;
         width: 270px;
         height: 120vh;
         background: #1067cc;
@@ -460,5 +460,8 @@ header.sticky {
     .home {
         height: 85vh;
         transition: .2s;
+    }
+    .row-item {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
